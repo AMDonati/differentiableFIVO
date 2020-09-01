@@ -102,7 +102,7 @@ def create_pianoroll_dataset(path,
   """
   # Load the data from disk.
   num_notes = max_note - min_note + 1
-  with tf.gfile.Open(path, "r") as f:
+  with tf.gfile.Open(path, "rb") as f:
     raw_data = pickle.load(f)
   pianorolls = raw_data[split]
   mean = raw_data["train_mean"]

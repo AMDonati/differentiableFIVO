@@ -49,7 +49,7 @@ NUM_NOTES = MAX_NOTE - MIN_NOTE + 1
 def main(unused_argv):
   if FLAGS.out_file is None:
     FLAGS.out_file = FLAGS.in_file
-  with tf.gfile.Open(FLAGS.in_file, 'r') as f:
+  with tf.gfile.Open(FLAGS.in_file, 'rb') as f:
     pianorolls = pickle.load(f)
   dense_pianorolls = [sparse_pianoroll_to_dense(p, MIN_NOTE, NUM_NOTES)[0]
                       for p in pianorolls['train']]
