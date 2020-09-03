@@ -70,7 +70,7 @@ tf.app.flags.DEFINE_integer("max_steps", int(1e6),
                             "The number of gradient update steps to train for.")
 tf.app.flags.DEFINE_integer("summarize_every", 50,
                             "The number of steps between summaries.")
-tf.app.flags.DEFINE_enum("resampling_type", "differentiable",
+tf.app.flags.DEFINE_enum("resampling_type", "multinomial",
                          ["multinomial", "relaxed", "differentiable"],
                          "The resampling strategy to use for training.")
 tf.app.flags.DEFINE_float("sinkhorn_regularization", 0.1,

@@ -26,6 +26,7 @@ import sonnet as snt
 import tensorflow as tf
 
 from fivo.models import base
+from fivo.models.utils import MLP
 
 
 VRNNState = namedtuple("VRNNState", "rnn_state latent_encoded")
@@ -512,14 +513,18 @@ def create_vrnn(
     encoded_latent_size = latent_size
   if initializers is None:
     initializers = _DEFAULT_INITIALIZERS
-  data_encoder = snt.nets.MLP(
-      output_sizes=fcnet_hidden_sizes + [encoded_data_size],
-      initializers=initializers,
-      name="data_encoder")
-  latent_encoder = snt.nets.MLP(
-      output_sizes=fcnet_hidden_sizes + [encoded_latent_size],
-      initializers=initializers,
-      name="latent_encoder")
+  # data_encoder = snt.nets.MLP(
+  #     output_sizes=fcnet_hidden_sizes + [encoded_data_size],
+  #     name="data_encoder")
+  data_encoder = MLP(layer_sizes=fcnet_hidden_sizes + [encoded_data_size],
+                                 activation_fn=tf.nn.relu,
+                               name="data_encoder")
+  # latent_encoder = snt.nets.MLP(
+  #     output_sizes=fcnet_hidden_sizes + [encoded_latent_size],
+  #     name="latent_encoder")
+  latent_encoder = MLP(layer_sizes=fcnet_hidden_sizes + [encoded_latent_size],
+                        activation_fn=tf.nn.relu,
+                        name="latent_encoder")
   transition = base.ConditionalNormalDistribution(
       size=latent_size,
       hidden_layer_sizes=fcnet_hidden_sizes,

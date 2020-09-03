@@ -1,3 +1,5 @@
+#TODO: replace sonnet functions by tf ones.
+
 # Copyright 2018 The TensorFlow Authors All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +25,7 @@ import sonnet as snt
 import tensorflow as tf
 
 from fivo import nested_utils as nested
+from fivo.models.utils import MLP
 
 tfd = tf.distributions
 
@@ -116,13 +119,16 @@ class ConditionalNormalDistribution(object):
     self.size = size
     if initializers is None:
       initializers = DEFAULT_INITIALIZERS
-    self.fcnet = snt.nets.MLP(
-        output_sizes=hidden_layer_sizes + [2*size],
-        activation=hidden_activation_fn,
-        initializers=initializers,
-        activate_final=False,
-        use_bias=True,
-        name=name + "_fcnet")
+    # self.fcnet = snt.nets.MLP(
+    #     output_sizes=hidden_layer_sizes + [2*size],
+    #     activation=hidden_activation_fn,
+    #     initializers=initializers,
+    #     activate_final=False,
+    #     use_bias=True,
+    #     name=name + "_fcnet") #TODO: replace this by a tf function.
+    self.fcnet = MLP(layer_sizes=hidden_layer_sizes + [2*size],
+                                 activation_fn=hidden_activation_fn,
+                                 name=name + "_fcnet")
 
   def condition(self, tensor_list, **unused_kwargs):
     """Computes the parameters of a normal distribution based on the inputs."""
@@ -167,13 +173,16 @@ class ConditionalBernoulliDistribution(object):
     self.size = size
     if initializers is None:
       initializers = DEFAULT_INITIALIZERS
-    self.fcnet = snt.nets.MLP(
-        output_sizes=hidden_layer_sizes + [size],
-        activation=hidden_activation_fn,
-        initializers=initializers,
-        activate_final=False,
-        use_bias=True,
-        name=name + "_fcnet")
+    # self.fcnet = snt.nets.MLP(
+    #     output_sizes=hidden_layer_sizes + [size],
+    #     activation=hidden_activation_fn,
+    #     initializers=initializers,
+    #     activate_final=False,
+    #     use_bias=True,
+    #     name=name + "_fcnet")
+    self.fcnet = MLP(layer_sizes=hidden_layer_sizes + [size],
+                                 activation_fn=hidden_activation_fn,
+                                 name=name + "_fcnet")
 
   def condition(self, tensor_list):
     """Computes the p parameter of the Bernoulli distribution."""
