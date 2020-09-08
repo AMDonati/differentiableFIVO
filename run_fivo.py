@@ -29,13 +29,13 @@ from fivo import runners
 tf.app.flags.DEFINE_enum("mode", "train",
                          ["train", "eval", "sample"],
                          "The mode of the binary.")
-tf.app.flags.DEFINE_enum("model", "ghmm",
+tf.app.flags.DEFINE_enum("model", "vrnn",
                          ["vrnn", "ghmm", "srnn"],
                          "Model choice.")
 tf.app.flags.DEFINE_integer("latent_size", 64,
-                            "The size of the latent state of the model.")
+                            "The size of the latent state of the model.") #TODO: import param
 tf.app.flags.DEFINE_enum("dataset_type", "pianoroll",
-                         ["pianoroll", "speech", "pose"],
+                         ["pianoroll", "speech", "pose", "synthetic", "covid"],
                          "The type of dataset.")
 tf.app.flags.DEFINE_string("dataset_path", r"C:\Users\Admin\Python\DifferentiableFIVO\research\fivo\bin\piano-midi.de.pkl",
                            "Path to load the dataset from.")
@@ -43,12 +43,12 @@ tf.app.flags.DEFINE_integer("data_dimension", None,
                             "The dimension of each vector in the data sequence. "
                             "Defaults to 88 for pianoroll datasets and 200 for speech "
                             "datasets. Should not need to be changed except for "
-                            "testing.")
+                            "testing.") #TODO: to change for smc_t datasets ?
 tf.app.flags.DEFINE_integer("batch_size", 2,
-                            "Batch size.")
+                            "Batch size.") #TODO: import param
 tf.app.flags.DEFINE_integer("num_samples", 10,
                             "The number of samples (or particles) for multisample "
-                            "algorithms.")
+                            "algorithms.") #TODO: import param
 tf.app.flags.DEFINE_string("logdir", "/tmp/smc_vi",
                            "The directory to keep checkpoints and summaries in.")
 tf.app.flags.DEFINE_integer("random_seed", 0,
@@ -65,9 +65,9 @@ tf.app.flags.DEFINE_boolean("normalize_by_seq_len", True,
                             "If true, normalize the loss by the number of timesteps "
                             "per sequence.")
 tf.app.flags.DEFINE_float("learning_rate", 0.01,
-                          "The learning rate for ADAM.")
+                          "The learning rate for ADAM.") #TODO: import param
 tf.app.flags.DEFINE_integer("max_steps", int(1e6),
-                            "The number of gradient update steps to train for.")
+                            "The number of gradient update steps to train for.") #TODO: import param
 tf.app.flags.DEFINE_integer("summarize_every", 50,
                             "The number of steps between summaries.")
 tf.app.flags.DEFINE_enum("resampling_type", "multinomial",
@@ -101,13 +101,13 @@ tf.app.flags.DEFINE_enum("split", "train",
 
 # Sampling flags.
 tf.app.flags.DEFINE_integer("sample_length", 50,
-                            "The number of timesteps to sample for.")
+                            "The number of timesteps to sample for.") #TODO: import param
 tf.app.flags.DEFINE_integer("prefix_length", 25,
                             "The number of timesteps to condition the model on "
-                            "before sampling.")
+                            "before sampling.") #TODO: import param
 tf.app.flags.DEFINE_string("sample_out_dir", None,
                            "The directory to write the samples to. "
-                           "Defaults to logdir.")
+                           "Defaults to logdir.") #TODO: import param
 
 # GHMM flags.
 tf.app.flags.DEFINE_float("variance", 0.1,
