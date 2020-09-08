@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84077e75-40a7-49f7-934d-63d08e174144" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SMC-T-v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/differentiableFIVO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/differentiableFIVO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fivo/runners.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/runners.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fivo/data/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/data/datasets.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,25 +18,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="vrnn.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fivo/models/vrnn.py">
+      <file leaf-file-name="datasets.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fivo/data/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1831">
-              <caret line="524" selection-start-line="524" selection-end-line="524" />
+            <state relative-caret-position="630">
+              <caret line="42" column="79" lean-forward="true" selection-start-line="42" selection-start-column="79" selection-end-line="42" selection-end-column="79" />
               <folding>
-                <element signature="e#710#748#0" expanded="true" />
+                <element signature="e#734#772#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_fivo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run_fivo.py">
+      <file leaf-file-name="create_timit_dataset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fivo/data/create_timit_dataset.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SMC-T-v2/src/scripts/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-465">
-              <caret line="74" column="72" lean-forward="true" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
+            <state relative-caret-position="270">
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="96" />
               <folding>
-                <element signature="e#761#799#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1530">
-              <caret line="102" column="6" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
+              <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -52,6 +61,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1104">
               <caret line="158" selection-start-line="158" selection-end-line="158" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runners.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fivo/runners.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-310">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -85,15 +103,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/fivo/data/calculate_pianoroll_mean.py" />
-        <option value="$PROJECT_DIR$/fivo/models/base.py" />
         <option value="$PROJECT_DIR$/fivo/models/utils.py" />
-        <option value="$PROJECT_DIR$/fivo/models/vrnn.py" />
         <option value="$PROJECT_DIR$/run_fivo.py" />
-        <option value="$PROJECT_DIR$/fivo/data/datasets.py" />
         <option value="$PROJECT_DIR$/fivo/runners.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/fivo/models/base.py" />
+        <option value="$PROJECT_DIR$/fivo/models/vrnn.py" />
+        <option value="$PROJECT_DIR$/fivo/models/srnn.py" />
+        <option value="$PROJECT_DIR$/fivo/data/datasets.py" />
       </list>
     </option>
   </component>
@@ -102,6 +121,7 @@
     <option name="width" value="1440" />
     <option name="height" value="819" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -117,7 +137,18 @@
             <path>
               <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
               <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="fivo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="SMC-T-v2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="SMC-T-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
@@ -132,7 +163,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -181,7 +212,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -232,9 +262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7695">
           <caret line="524" selection-start-line="524" selection-end-line="524" />
-          <folding>
-            <element signature="e#710#748#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -286,9 +313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7890">
           <caret line="526" column="46" lean-forward="true" selection-start-line="526" selection-start-column="46" selection-end-line="526" selection-end-column="46" />
-          <folding>
-            <element signature="e#710#748#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -378,16 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-          <folding>
-            <element signature="e#774#812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fivo/smc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3107">
@@ -399,40 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1104">
           <caret line="158" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/runners.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_fivo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="74" column="72" lean-forward="true" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
-          <folding>
-            <element signature="e#761#799#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="6" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/data/datasets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="129" column="34" selection-start-line="129" selection-start-column="34" selection-end-line="129" selection-end-column="34" />
-          <folding>
-            <element signature="e#734#772#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -450,12 +430,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/models/srnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fivo/models/vrnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1831">
-          <caret line="524" selection-start-line="524" selection-end-line="524" />
+        <state relative-caret-position="360">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2195">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_fivo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-492">
+          <caret line="74" column="72" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
           <folding>
-            <element signature="e#710#748#0" expanded="true" />
+            <element signature="e#761#799#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/runners.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMC-T-v2/src/scripts/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/data/create_timit_dataset.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/data/datasets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="79" lean-forward="true" selection-start-line="42" selection-start-column="79" selection-end-line="42" selection-end-column="79" />
+          <folding>
+            <element signature="e#734#772#0" expanded="true" />
           </folding>
         </state>
       </provider>

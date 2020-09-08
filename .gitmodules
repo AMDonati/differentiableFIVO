@@ -1,0 +1,3 @@
+[submodule "SMC-T-v2"]
+	path = SMC-T-v2
+	url = https://github.com/AMDonati/SMC-T-v2.git

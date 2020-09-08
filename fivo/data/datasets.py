@@ -26,6 +26,8 @@ import numpy as np
 from scipy.sparse import coo_matrix
 import tensorflow as tf
 
+from data_provider.datasets import Dataset, CovidDataset
+
 # The default number of threads used to process data in parallel.
 DEFAULT_PARALLELISM = 12
 
@@ -451,3 +453,19 @@ def create_chain_graph_dataset(
   observations = tf.transpose(observations, perm=[1, 0, 2])
   lengths = tf.ones([batch_size], dtype=tf.int32) * num_observations
   return observations, lengths
+
+def create_synthetic_dataset_from_smc_T(path,
+                                        split,
+                                        batch_size):
+    dataset = Dataset(data_path=path, BUFFER_SIZE=500, BATCH_SIZE=batch_size)
+    train_data, val_data, test_data = Dataset.get_datasets()
+    inputs, targets, lengths = dataset.prepare_dataset_for_FIVO(train_data=train_data, val_data=val_data, test_data=test_data, split=split)
+    return inputs, targets, lengths
+
+def create_covid_dataset_from_smc_T(path,
+                                        split,
+                                        batch_size):
+    dataset = CovidDataset(data_path=path, BUFFER_SIZE=50, BATCH_SIZE=batch_size)
+    train_data, val_data, test_data = Dataset.get_datasets()
+    inputs, targets, lengths = dataset.prepare_dataset_for_FIVO(train_data=train_data, val_data=val_data, test_data=test_data, split=split)
+    return inputs, targets, lengths
