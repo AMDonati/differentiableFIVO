@@ -67,7 +67,7 @@ The script `calculate_pianoroll_mean.py` loads a pianoroll pickle file, calculat
 
 ```
 python data/calculate_pianoroll_mean.py --in_file=$PIANOROLL_DIR/piano-midi.de.pkl
-python data/calculate_pianoroll_mean.py --in_file=$PIANOROLL_DIR/nottingham.de.pkl
+python data/calculate_pianoroll_mean.py --in_file=$PIANOROLL_DIR/nottingham.pkl
 python data/calculate_pianoroll_mean.py --in_file=$PIANOROLL_DIR/musedata.pkl
 python data/calculate_pianoroll_mean.py --in_file=$PIANOROLL_DIR/jsb.pkl
 ```
