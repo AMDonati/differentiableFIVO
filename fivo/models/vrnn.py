@@ -22,7 +22,7 @@ from __future__ import print_function
 from collections import namedtuple
 import functools
 
-import sonnet as snt
+#import sonnet as snt
 import tensorflow as tf
 
 from fivo.models import base
