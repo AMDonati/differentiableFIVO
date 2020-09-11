@@ -243,11 +243,11 @@ def smc(
     max_num_steps = tf.reduce_max(num_steps)
     seq_mask = tf.transpose(
         tf.sequence_mask(num_steps, maxlen=max_num_steps, dtype=tf.float32),
-        perm=[1, 0])
-    seq_mask = tf.tile(seq_mask, [1, num_particles])
+        perm=[1, 0]) # shape (max_num_steps, B)
+    seq_mask = tf.tile(seq_mask, [1, num_particles]) # shape (max_num_steps, B*N)
     mask_ta = tf.TensorArray(seq_mask.dtype,
                              max_num_steps,
-                             name='mask_ta')
+                             name='mask_ta') # Class wrapping dynamic-sized, per-time-step, write-once Tensor arrays.
     mask_ta = mask_ta.unstack(seq_mask)
     # Initialize the state.
     t0 = tf.constant(0, tf.int32)
@@ -262,7 +262,7 @@ def smc(
 
     if loop_fn is None:
         loop_fn = lambda *args: 0
-
+    # initialization for smc.
     init_loop_state = loop_fn(None, None, None, None, None, None, -1)
     init_states = (init_particle_state, init_loop_state)
     ta_names = ['log_weights', 'resampled']
@@ -337,8 +337,11 @@ def smc(
         loop_vars=(t0, init_states, tas, log_weights_acc, log_z_hat_acc),
         parallel_iterations=parallel_iterations,
         swap_memory=swap_memory)
+    # final_state (tuple) -> first element: 0 = {TrainableVRNNState} TrainableVRNNState(rnn_state=LSTMStateTuple(c=<tf.Tensor 'while/Exit_1:0' shape=(?, 64) dtype=float32>, h=<tf.Tensor 'while/Exit_2:0' shape=(?, 64) dtype=float32>), latent_encoded=<tf.Tensor 'while/Exit_3:0' shape=(?, 64) dtype=float32>, rnn_out=<tf.Tensor 'while/Exit_4:0' shape=(?, 64) dtype=float32>)… View
 
-    log_weights, resampled = [x.stack() for x in tas]
+    # tas: log_weights > shape (B,N), resampled (boolean for actual resampling or not.)
+
+    log_weights, resampled = [x.stack() for x in tas] # log_weights > shape (S,B,N) ?
     log_weights = tf.transpose(log_weights, perm=[0, 2, 1])
     final_particle_state, final_loop_state = final_state
     return (log_z_hat, log_weights, resampled,

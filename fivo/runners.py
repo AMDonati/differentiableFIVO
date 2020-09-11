@@ -64,7 +64,7 @@ def create_dataset_and_model(config, split, shuffle, repeat):
         # initialize the bias of the generative distribution.
         emission_bias_init = -tf.log(
             1. / tf.clip_by_value(mean, 0.0001, 0.9999) - 1)
-        emission_distribution_class = base.ConditionalBernoulliDistribution  # TODO: understand which distribution should be used.
+        emission_distribution_class = base.ConditionalBernoulliDistribution  # Bernouilli Distribution because discrete input data.
     elif config.dataset_type == "speech":
         inputs, targets, lengths = datasets.create_speech_dataset(
             config.dataset_path, config.batch_size,
@@ -79,7 +79,7 @@ def create_dataset_and_model(config, split, shuffle, repeat):
         inputs, targets, lengths = datasets.create_synthetic_dataset_from_smc_T(path=config.dataset_path, split=split, batch_size=config.batch_size)
         mean = None
         emission_bias_init = None
-        emission_distribution_class = base.ConditionalNormalDistribution #TODO: check this.
+        emission_distribution_class = base.ConditionalNormalDistribution # Normal Distrib because here we have continuous input data.
     elif config.dataset_type == "covid":
         inputs, targets, lengths = datasets.create_covid_dataset_from_smc_T(path=config.dataset_path, split=split,
                                                                                 batch_size=config.batch_size)
@@ -183,6 +183,7 @@ def run_train(config, create_dataset_and_model_fn=create_dataset_and_model):
         """
         inputs, targets, lengths, model, _ = create_dataset_and_model_fn(
             config, split="train", shuffle=True, repeat=True)
+        # inputs, targets: shape (S,B,D), lengths: shape (B)
         # Compute lower bounds on the log likelihood.
         if config.bound == "elbo":
             ll_per_seq, _, _ = bounds.iwae(

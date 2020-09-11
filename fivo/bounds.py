@@ -156,8 +156,8 @@ def fivo(model,
   #   particle 2 of particle filter 1
   #   ...
   #   particle num_samples of particle filter batch_size
-  observations = nested.tile_tensors(observations, [1, num_samples])
-  tiled_seq_lengths = tf.tile(seq_lengths, [num_samples])
+  observations = nested.tile_tensors(observations, [1, num_samples]) # tuple of inputs, targets > shape (S,B*N,D).
+  tiled_seq_lengths = tf.tile(seq_lengths, [num_samples]) # shape (B*N°
   model.set_observations(observations, tiled_seq_lengths)
 
   if resampling_type == 'multinomial':
