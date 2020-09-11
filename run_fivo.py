@@ -41,10 +41,10 @@ tf.app.flags.DEFINE_string("dataset_path", r"C:\Users\Admin\Python\Differentiabl
                            "Path to load the dataset from.")
 tf.app.flags.DEFINE_integer("data_dimension", None,
                             "The dimension of each vector in the data sequence. "
-                            "Defaults to 88 for pianoroll datasets and 200 for speech "
+                            "Defaults to 88 for pianoroll datasets and 200 for speech"
                             "datasets. Should not need to be changed except for "
                             "testing.") #TODO: to change for smc_t datasets ?
-tf.app.flags.DEFINE_integer("batch_size", 2,
+tf.app.flags.DEFINE_integer("batch_size", 4,
                             "Batch size.") #TODO: import param
 tf.app.flags.DEFINE_integer("num_samples", 10,
                             "The number of samples (or particles) for multisample "
@@ -64,9 +64,9 @@ tf.app.flags.DEFINE_enum("bound", "fivo",
 tf.app.flags.DEFINE_boolean("normalize_by_seq_len", True,
                             "If true, normalize the loss by the number of timesteps "
                             "per sequence.")
-tf.app.flags.DEFINE_float("learning_rate", 0.01,
+tf.app.flags.DEFINE_float("learning_rate", 3e-5,
                           "The learning rate for ADAM.") #TODO: import param
-tf.app.flags.DEFINE_integer("max_steps", int(1e6),
+tf.app.flags.DEFINE_integer("max_steps", int(1e3),
                             "The number of gradient update steps to train for.") #TODO: import param
 tf.app.flags.DEFINE_integer("summarize_every", 50,
                             "The number of steps between summaries.")
