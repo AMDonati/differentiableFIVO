@@ -11,4 +11,3 @@ python run_fivo.py \
   --dataset_path="data/synthetic_model_1" \
   --dataset_type="synthetic" \
   --latent_size=32 \
-  --max_steps==1000
