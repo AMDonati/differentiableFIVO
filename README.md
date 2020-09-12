@@ -51,6 +51,9 @@ Requirements before we start:
 * [scipy](https://www.scipy.org/)
 * [sonnet](https://github.com/deepmind/sonnet)
 
+#### SMC-T-v2 library
+* `python -m pip install git+https://github.com/AMDonati/SMC-T-v2.git --upgrade`
+
 
 #### Download the Data
 
