@@ -81,7 +81,7 @@ Now we can train a model. Here is the command for a standard training run, taken
 ```
 python run_fivo.py \
   --mode=train \
-  --logdir=/tmp/fivo \
+  --logdir="output/fivo/pianorolls" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -137,7 +137,7 @@ You can also sample from trained models. The `sample` mode loads a model checkpo
 python run_fivo.py \
   --mode=sample \
   --alsologtostderr \
-  --logdir="/tmp/fivo" \
+ --logdir="output/fivo/pianorolls"
   --model=vrnn \
   --bound=fivo \
   --batch_size=4 \
@@ -194,7 +194,7 @@ This is very similar to training on pianoroll datasets, with just a few flags sw
 ```
 python run_fivo.py \
   --mode=train \
-  --logdir=/tmp/fivo \
+  --logdir="output/fivo/timit" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
