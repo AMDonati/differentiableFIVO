@@ -26,7 +26,7 @@ import numpy as np
 from scipy.sparse import coo_matrix
 import tensorflow as tf
 
-from data_provider.datasets import Dataset, CovidDataset
+#from data_provider.datasets import Dataset, CovidDataset
 
 # The default number of threads used to process data in parallel.
 DEFAULT_PARALLELISM = 12

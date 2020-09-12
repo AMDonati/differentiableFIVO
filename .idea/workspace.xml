@@ -6,9 +6,6 @@
       <change afterPath="$PROJECT_DIR$/SMC-T-v2/data/synthetic_model_1_old/train/train_data_synthetic_1_feat.npy" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SMC-T-v2/data/synthetic_model_1_old/val/val_data_synthetic_1_feat.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SMC-T-v2" beforeDir="false" afterPath="$PROJECT_DIR$/SMC-T-v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fivo/bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/bounds.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fivo/runners.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/runners.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fivo/smc.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/smc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +37,8 @@
       <file leaf-file-name="run_fivo.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_fivo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="83" column="88" lean-forward="true" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
+            <state relative-caret-position="725">
+              <caret line="83" column="88" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
               <folding>
                 <element signature="e#761#799#0" expanded="true" />
               </folding>
@@ -126,11 +123,6 @@
             <path>
               <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
               <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
-              <item name="fivo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
@@ -252,6 +244,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -278,11 +271,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/run_fivo.py</url>
-          <line>131</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/fivo/runners.py</url>
           <line>64</line>
@@ -689,8 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_fivo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="83" column="88" lean-forward="true" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
+        <state relative-caret-position="725">
+          <caret line="83" column="88" selection-start-line="83" selection-start-column="88" selection-end-line="83" selection-end-column="88" />
           <folding>
             <element signature="e#761#799#0" expanded="true" />
           </folding>
