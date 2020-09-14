@@ -113,7 +113,7 @@ python run_fivo.py \
   --mode=eval \
   --split=test \
   --alsologtostderr \
-  --logdir=/tmp/fivo \
+  --logdir="output/fivo/pianorolls" \
   --model=vrnn \
   --batch_size=4 \
   --num_samples=4 \
@@ -137,7 +137,7 @@ You can also sample from trained models. The `sample` mode loads a model checkpo
 python run_fivo.py \
   --mode=sample \
   --alsologtostderr \
- --logdir="output/fivo/pianorolls"
+ --logdir="output/fivo/pianorolls" \
   --model=vrnn \
   --bound=fivo \
   --batch_size=4 \

@@ -59,7 +59,7 @@ def create_dataset_and_model(config, split, shuffle, repeat):
     if config.dataset_type == "pianoroll":
         inputs, targets, lengths, mean = datasets.create_pianoroll_dataset(
             config.dataset_path, split, config.batch_size, shuffle=shuffle,
-            repeat=repeat)
+            repeat=repeat) # mean of shape: num_features.
         # Convert the mean of the training set to logit space so it can be used to
         # initialize the bias of the generative distribution.
         emission_bias_init = -tf.log(
@@ -76,8 +76,7 @@ def create_dataset_and_model(config, split, shuffle, repeat):
         emission_bias_init = None
         emission_distribution_class = base.ConditionalNormalDistribution
     elif config.dataset_type == "synthetic":
-        inputs, targets, lengths = datasets.create_synthetic_dataset_from_smc_T(path=config.dataset_path, split=split, batch_size=config.batch_size)
-        mean = None
+        inputs, targets, lengths, mean = datasets.create_synthetic_dataset_from_smc_T(path=config.dataset_path, split=split, batch_size=config.batch_size)
         emission_bias_init = None
         emission_distribution_class = base.ConditionalNormalDistribution # Normal Distrib because here we have continuous input data.
     elif config.dataset_type == "covid":
@@ -384,7 +383,7 @@ def run_eval(config, create_dataset_and_model_fn=create_dataset_and_model):
         if config.random_seed: tf.set_random_seed(config.random_seed)
         lower_bounds, total_batch_length, batch_size, global_step = create_graph()
         summary_dir = config.logdir + "/" + config.split
-        summary_writer = tf.summary.FileWriter(
+        summary_writer = tf.summary.FileWriter( #TODO: see how this can be read.
             summary_dir, flush_secs=15, max_queue=100)
         saver = tf.train.Saver()
         with tf.train.SingularMonitoredSession() as sess:
