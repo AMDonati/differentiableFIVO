@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="84077e75-40a7-49f7-934d-63d08e174144" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/fivo/data/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/data/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fivo/runners.py" beforeDir="false" afterPath="$PROJECT_DIR$/fivo/runners.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_fivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_fivo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +18,11 @@
       <file leaf-file-name="vrnn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fivo/models/vrnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="202">
+              <caret line="204" selection-start-line="204" selection-end-line="204" />
+              <folding>
+                <element signature="e#710#748#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,8 +30,8 @@
       <file leaf-file-name="run_fivo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_fivo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="69" column="62" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
+            <state relative-caret-position="50">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
               <folding>
                 <element signature="e#761#799#0" expanded="true" />
               </folding>
@@ -34,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="runners.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="runners.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fivo/runners.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="83" column="68" selection-start-line="83" selection-start-column="68" selection-end-line="83" selection-end-column="68" />
+            <state relative-caret-position="280">
+              <caret line="466" selection-start-line="466" selection-end-line="466" />
               <folding>
                 <element signature="e#770#808#0" expanded="true" />
               </folding>
@@ -46,11 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datasets.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="control_flow_ops.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/miniconda3/envs/tf-fivo/lib/python3.7/site-packages/tensorflow_core/python/ops/control_flow_ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="2169" selection-start-line="2169" selection-end-line="2169" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datasets.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fivo/data/datasets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="466" column="46" lean-forward="true" selection-start-line="466" selection-start-column="46" selection-end-line="466" selection-end-column="46" />
+            <state relative-caret-position="165">
+              <caret line="462" selection-start-line="462" selection-end-line="462" />
               <folding>
                 <element signature="e#734#772#0" expanded="true" />
               </folding>
@@ -70,8 +84,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2190">
-              <caret line="136" selection-start-line="136" selection-end-line="148" selection-end-column="20" />
+            <state relative-caret-position="855">
+              <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -109,10 +123,10 @@
         <option value="$PROJECT_DIR$/fivo/bounds.py" />
         <option value="$PROJECT_DIR$/fivo/smc.py" />
         <option value="$PROJECT_DIR$/.gitmodules" />
-        <option value="$PROJECT_DIR$/run_fivo.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/fivo/runners.py" />
         <option value="$PROJECT_DIR$/run_fivo_synthetic_model_1.sh" />
+        <option value="$PROJECT_DIR$/run_fivo.py" />
+        <option value="$PROJECT_DIR$/fivo/runners.py" />
         <option value="$PROJECT_DIR$/fivo/data/datasets.py" />
       </list>
     </option>
@@ -134,6 +148,60 @@
             <path>
               <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
               <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="fivo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="fivo" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="fivo" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="synthetic_1_bs_4_1000it_10p" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="synthetic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="differentiableFIVO" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="synthetic" type="462c0819:PsiDirectoryNode" />
+              <item name="fivo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="differentiableFIVO" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_fivo_synthetic">
+  <component name="RunManager" selected="Python.run_fivo_synthetic_sample">
     <configuration name="run_fivo_default" type="PythonConfigurationType" factoryName="Python">
       <module name="differentiableFIVO" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -303,6 +371,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_fivo.py" />
       <option name="PARAMETERS" value="--mode train --logdir &quot;output/tmp/synthetic/fivo&quot; --model vrnn --bound fivo --summarize_every 100 --batch_size 4 --num_samples 4 --learning_rate 0.0001 --dataset_path &quot;$USER_HOME$/pianorolls/jsb.pkl&quot; --dataset_type &quot;pianoroll&quot; --resampling_type &quot;multinomial&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="run_fivo_default_sample" type="PythonConfigurationType" factoryName="Python">
+      <module name="differentiableFIVO" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_fivo.py" />
+      <option name="PARAMETERS" value="--mode sample --logdir &quot;output/tmp/synthetic/fivo&quot; --model vrnn --bound fivo --summarize_every 100 --batch_size 4 --num_samples 4 --learning_rate 0.0001 --dataset_path &quot;$USER_HOME$/pianorolls/jsb.pkl&quot; --dataset_type &quot;pianoroll&quot; --resampling_type &quot;multinomial&quot; --split test" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -343,9 +429,29 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="run_fivo_synthetic_sample" type="PythonConfigurationType" factoryName="Python">
+      <module name="differentiableFIVO" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_fivo.py" />
+      <option name="PARAMETERS" value="--mode sample --latent_size 32 --logdir &quot;output/synthetic_1_bs_4_1000it_10p&quot; --model vrnn --bound fivo --summarize_every 100 --batch_size 4 --num_samples 10 --learning_rate 0.0001 --dataset_path &quot;data/synthetic_model_1&quot; --dataset_type &quot;synthetic&quot; --resampling_type &quot;multinomial&quot; --prefix_length 12 --sample_length 12 --split test" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.run_fivo_default" />
+      <item itemvalue="Python.run_fivo_default_sample" />
       <item itemvalue="Python.run_fivo_synthetic" />
+      <item itemvalue="Python.run_fivo_synthetic_sample" />
       <item itemvalue="Python.run_fivo_speech" />
     </list>
   </component>
@@ -365,7 +471,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13601127" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32963988" />
@@ -373,7 +479,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39473686" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.44598338" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -395,16 +501,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fivo/runners.py</url>
-          <line>186</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fivo/runners.py</url>
-          <line>198</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/fivo/bounds.py</url>
           <line>147</line>
@@ -435,10 +531,30 @@
           <line>333</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fivo/models/vrnn.py</url>
+          <line>204</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fivo/runners.py</url>
+          <line>498</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fivo/runners.py</url>
+          <line>464</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/fivo/runners.py</url>
           <line>79</line>
-          <option name="timeStamp" value="55" />
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fivo/data/datasets.py</url>
+          <line>462</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -451,24 +567,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="78" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/miniconda3/envs/tf-fivo/lib/python3.7/site-packages/absl/flags/_flag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2580">
@@ -672,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/models/srnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SMC-T-v2/src/scripts/run.py" />
     <entry file="file://$PROJECT_DIR$/fivo/data/create_timit_dataset.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -737,20 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/models/vrnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2190">
-          <caret line="136" selection-start-line="136" selection-end-line="148" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_fivo_synthetic_model_1.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -758,32 +839,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fivo/data/datasets.py">
+    <entry file="file://$USER_HOME$/miniconda3/envs/tf-fivo/lib/python3.7/site-packages/tensorflow_core/python/ops/control_flow_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="466" column="46" lean-forward="true" selection-start-line="466" selection-start-column="46" selection-end-line="466" selection-end-column="46" />
+        <state relative-caret-position="145">
+          <caret line="2169" selection-start-line="2169" selection-end-line="2169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/models/srnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3926">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/miniconda3/envs/tf-fivo/lib/python3.7/site-packages/tensorflow_core/python/ops/array_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/models/vrnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
           <folding>
-            <element signature="e#734#772#0" expanded="true" />
+            <element signature="e#710#748#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run_fivo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="62" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
+        <state relative-caret-position="50">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
           <folding>
             <element signature="e#761#799#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fivo/runners.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="83" column="68" selection-start-line="83" selection-start-column="68" selection-end-line="83" selection-end-column="68" />
+        <state relative-caret-position="280">
+          <caret line="466" selection-start-line="466" selection-end-line="466" />
           <folding>
             <element signature="e#770#808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fivo/data/datasets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="462" selection-start-line="462" selection-end-line="462" />
+          <folding>
+            <element signature="e#734#772#0" expanded="true" />
           </folding>
         </state>
       </provider>

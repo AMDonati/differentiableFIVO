@@ -458,7 +458,7 @@ def create_synthetic_dataset_from_smc_T(path,
                                         split,
                                         batch_size):
     dataset = Dataset(data_path=path, BUFFER_SIZE=500, BATCH_SIZE=batch_size)
-    train_data, val_data, test_data = dataset.get_datasets() #TODO: issue here: Dataset seems not to be recognized.
+    train_data, val_data, test_data = dataset.get_datasets()
     inputs, targets, lengths = dataset.prepare_dataset_for_FIVO(train_data=train_data, val_data=val_data, test_data=test_data, split=split)
     mean = tf.constant([0.]*train_data.shape[-1], dtype=tf.float32) # shape (num_features)
     return inputs, targets, lengths, mean
