@@ -497,5 +497,7 @@ def run_sample(config, create_dataset_and_model_fn=create_dataset_and_model):
         with tf.train.SingularMonitoredSession(
                 checkpoint_dir=config.logdir) as sess:
             samples_out, prefixes_out = sess.run([samples, prefixes]) #TODO: solve bug here: not same size of tensors: prefixes (12, ?, 1) = 1200 versus samples = 480. # samples: shape (prefix_length, batch_size, num_particles, data_dimension)
-            with tf.gfile.Open(os.path.join(out_dir, "samples.npz"), "w") as fout:
+            with tf.gfile.Open(os.path.join(out_dir, "samples_preflen{}_sufflen{}.npz".format(config.prefix_length, config.sample_length)), "w") as fout:
+                print('samples shape', samples_out.shape)
+                print('prefixes shape', prefixes_out.shape)
                 np.save(fout, {"prefixes": prefixes_out, "samples": samples_out})
