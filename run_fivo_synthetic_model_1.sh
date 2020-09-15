@@ -1,7 +1,7 @@
 #!/bin/bash
 python run_fivo.py \
   --mode=train \
-  --logdir="output/fivo/synthetic_1_bs_4_1000it_10p" \
+  --logdir="output/fivo/synthetic_1_bs_4_1e6it_10p" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -39,3 +39,28 @@ python run_fivo.py \
   --split=test \
   --prefix_length=12 \
   --sample_length=12
+python run_fivo.py \
+  --mode=train \
+  --logdir="output/fivo/synthetic_2_bs_4_1e6it_10p" \
+  --model=vrnn \
+  --bound=fivo \
+  --summarize_every=100 \
+  --batch_size=4 \
+  --num_samples=10 \
+  --learning_rate=0.0001 \
+  --dataset_path="data/synthetic_model_2" \
+  --dataset_type="synthetic" \
+  --latent_size=32
+python run_fivo.py \
+  --mode=eval \
+  --logdir="output/fivo/synthetic_2_bs_4_1e6it_10p" \
+  --model=vrnn \
+  --bound=fivo \
+  --summarize_every=100 \
+  --batch_size=4 \
+  --num_samples=10 \
+  --learning_rate=0.0001 \
+  --dataset_path="data/synthetic_model_2" \
+  --dataset_type="synthetic" \
+  --latent_size=32 \
+  --split test

@@ -402,7 +402,7 @@ def run_eval(config, create_dataset_and_model_fn=create_dataset_and_model):
 def run_sample(config, create_dataset_and_model_fn=create_dataset_and_model):
     """Sample from the model. Only pianorolls and pose datasets are supported."""
 
-    def sample_from_model(model, initial_state, initial_inputs, mean):
+    def sample_from_model(model, initial_state, initial_inputs, mean): #TODO: correct mean for synthetic datasets...
         """Samples a sequence of outputs from the model.
 
         The mean must be supplied -- if it isn't the results will be incorrect.
