@@ -1,0 +1,6 @@
+model_checkpoint_path: "model.ckpt-100002"
+all_model_checkpoint_paths: "model.ckpt-98725"
+all_model_checkpoint_paths: "model.ckpt-99066"
+all_model_checkpoint_paths: "model.ckpt-99403"
+all_model_checkpoint_paths: "model.ckpt-99744"
+all_model_checkpoint_paths: "model.ckpt-100002"
