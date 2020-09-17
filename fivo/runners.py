@@ -254,6 +254,7 @@ def run_train(config, create_dataset_and_model_fn=create_dataset_and_model):
                 cur_step = -1
                 #while not sess.should_stop() and cur_step <= config.max_steps:
                 while cur_step <= config.max_steps:
+                    tf.logging.info("training current step:{}".format(cur_step))
                     if config.task > 0 and not start_training:
                         cur_step = sess.run(global_step)
                         tf.logging.info("task %d not active yet, sleeping at step %d" %

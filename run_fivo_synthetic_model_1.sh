@@ -1,7 +1,7 @@
 #!/bin/bash
 python run_fivo.py \
   --mode=train \
-  --logdir="output/fivo/synthetic_1_bs_4_1e6it_10p" \
+  --logdir="output/fivo/synthetic_1_bs_4_2e4it_10p" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
