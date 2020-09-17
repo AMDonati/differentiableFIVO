@@ -76,7 +76,7 @@ def create_dataset_and_model(config, split, shuffle, repeat):
         emission_bias_init = None
         emission_distribution_class = base.ConditionalNormalDistribution
     elif config.dataset_type == "synthetic":
-        inputs, targets, lengths, mean = datasets.create_synthetic_dataset_from_smc_T(path=config.dataset_path, split=split, batch_size=config.batch_size)
+        inputs, targets, lengths, mean = datasets.create_synthetic_dataset_from_smc_T(path=config.dataset_path, split=split, batch_size=config.batch_size, standardize=config.standardize)
         emission_bias_init = None
         emission_distribution_class = base.ConditionalNormalDistribution # Normal Distrib because here we have continuous input data.
     elif config.dataset_type == "covid":
@@ -499,7 +499,7 @@ def run_sample(config, create_dataset_and_model_fn=create_dataset_and_model):
             tf.gfile.MakeDirs(out_dir)
         with tf.train.SingularMonitoredSession(
                 checkpoint_dir=config.logdir) as sess:
-            samples_out, prefixes_out = sess.run([samples, prefixes]) #TODO: solve bug here: not same size of tensors: prefixes (12, ?, 1) = 1200 versus samples = 480. # samples: shape (prefix_length, batch_size, num_particles, data_dimension)
+            samples_out, prefixes_out = sess.run([samples, prefixes])
             with tf.gfile.Open(os.path.join(out_dir, "samples_preflen{}_sufflen{}.npz".format(config.prefix_length, config.sample_length)), "w") as fout:
                 print('samples shape', samples_out.shape)
                 print('prefixes shape', prefixes_out.shape)

@@ -456,10 +456,10 @@ def create_chain_graph_dataset(
 
 def create_synthetic_dataset_from_smc_T(path,
                                         split,
-                                        batch_size):
+                                        batch_size, standardize):
     dataset = Dataset(data_path=path, BUFFER_SIZE=500, BATCH_SIZE=batch_size)
     train_data, val_data, test_data = dataset.get_datasets()
-    inputs, targets, lengths, mean = dataset.prepare_dataset_for_FIVO(train_data=train_data, val_data=val_data, test_data=test_data, split=split)
+    inputs, targets, lengths, mean = dataset.prepare_dataset_for_FIVO(train_data=train_data, val_data=val_data, test_data=test_data, split=split, standardize=standardize)
     return inputs, targets, lengths, mean
 
 def create_covid_dataset_from_smc_T(path,

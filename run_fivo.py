@@ -65,6 +65,8 @@ tf.app.flags.DEFINE_enum("bound", "fivo",
 tf.app.flags.DEFINE_boolean("normalize_by_seq_len", True,
                             "If true, normalize the loss by the number of timesteps "
                             "per sequence.")
+tf.app.flags.DEFINE_boolean("standardize", True,
+                            "standardize input data.")
 tf.app.flags.DEFINE_float("learning_rate", 3e-5,
                           "The learning rate for ADAM.")  # TODO: import param
 tf.app.flags.DEFINE_integer("max_steps", int(1e5),
