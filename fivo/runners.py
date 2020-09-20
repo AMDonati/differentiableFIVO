@@ -500,7 +500,7 @@ def run_sample(config, create_dataset_and_model_fn=create_dataset_and_model):
         with tf.train.SingularMonitoredSession(
                 checkpoint_dir=config.logdir) as sess:
             samples_out, prefixes_out = sess.run([samples, prefixes])
-            with tf.gfile.Open(os.path.join(out_dir, "samples_preflen{}_sufflen{}.npz".format(config.prefix_length, config.sample_length)), "w") as fout:
+            with tf.gfile.Open(os.path.join(out_dir, "samples_preflen{}_sufflen{}_{}.npz".format(config.prefix_length, config.sample_length, config.split)), "w") as fout:
                 print('samples shape', samples_out.shape)
                 print('prefixes shape', prefixes_out.shape)
                 np.save(fout, {"prefixes": prefixes_out, "samples": samples_out})
