@@ -1,7 +1,7 @@
 #!/bin/bash
 python run_fivo.py \
   --mode=eval \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=elbo \
   --summarize_every=100 \
@@ -15,7 +15,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -31,7 +31,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -47,7 +47,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -63,7 +63,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -79,7 +79,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -95,7 +95,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -111,7 +111,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -127,7 +127,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -143,7 +143,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -159,7 +159,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -175,7 +175,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -191,7 +191,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -207,7 +207,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -223,7 +223,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -239,7 +239,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -255,7 +255,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -271,7 +271,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -287,7 +287,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -303,7 +303,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -319,7 +319,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -335,7 +335,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -351,7 +351,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -367,7 +367,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
@@ -383,7 +383,7 @@ python run_fivo.py \
   --standardize=True
 python run_fivo.py \
   --mode=sample \
-  --logdir="output/elbo/synthetic_1_bs_4" \
+  --logdir="output/elbo/synthetic_1_bs_32_standardize" \
   --model=vrnn \
   --bound=fivo \
   --summarize_every=100 \
