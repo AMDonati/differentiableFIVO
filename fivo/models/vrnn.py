@@ -208,7 +208,7 @@ class VRNN(object):
     p_zt = self.transition(rnn_out)
     zt = p_zt.sample(seed=self.random_seed)
     p_xt_given_zt, latent_encoded = self.emission(zt, rnn_out)
-    xt = p_xt_given_zt.sample(seed=self.random_seed) #TODO: sample 1000 samples instead...
+    xt = p_xt_given_zt.sample(seed=self.random_seed)
     new_state = VRNNState(rnn_state=rnn_state, latent_encoded=latent_encoded)
     return new_state, tf.to_float(xt)
 

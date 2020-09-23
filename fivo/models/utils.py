@@ -5,9 +5,12 @@ class MLP(tf.keras.Model):
 
     def __init__(self, layer_sizes, activation_fn, name):
         super(MLP, self).__init__()
-        #self.num_layers = len(layer_sizes)
         self.layers_ = [tf.keras.layers.Dense(l, activation=activation_fn, name=name+'_{}'.format(i)) for i,l in enumerate(layer_sizes)]
         self.output_size = layer_sizes[-1]
+        self.layers_ = []
+        for i, l in enumerate(layer_sizes[:-1]):
+            self.layers_.append(tf.keras.layers.Dense(l, activation=activation_fn, name=name+'_{}'.format(i)))
+        self.layers_.append(tf.keras.layers.Dense(layer_sizes[-1], name=name+'_{}'.format(len(layer_sizes))))
 
     def call(self, inputs):
         x = inputs
