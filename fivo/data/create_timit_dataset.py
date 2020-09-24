@@ -82,9 +82,9 @@ def load_timit_wav(filename):
                             len(header_length_str))
   header = wav_file.read(header_remaining_bytes)
   # Read the relevant header fields.
-  sample_count = int(SAMPLE_COUNT_REGEX.search(header).group(1))
-  sample_min = int(SAMPLE_MIN_REGEX.search(header).group(1))
-  sample_max = int(SAMPLE_MAX_REGEX.search(header).group(1))
+  sample_count = int(SAMPLE_COUNT_REGEX.search(str(header)).group(1))
+  sample_min = int(SAMPLE_MIN_REGEX.search(str(header)).group(1))
+  sample_max = int(SAMPLE_MAX_REGEX.search(str(header)).group(1))
   wav = np.fromstring(wav_file.read(), dtype="int16").astype("float32")
   # Check that the loaded data conforms to the header description.
   assert len(wav) == sample_count

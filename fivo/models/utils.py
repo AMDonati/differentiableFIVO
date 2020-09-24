@@ -1,6 +1,5 @@
 import tensorflow as tf
 
-
 class MLP(tf.keras.Model):
 
     def __init__(self, layer_sizes, activation_fn, name):
