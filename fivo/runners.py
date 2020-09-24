@@ -252,8 +252,8 @@ def run_train(config, create_dataset_and_model_fn=create_dataset_and_model):
                     save_summaries_steps=config.summarize_every,
                     log_step_count_steps=config.summarize_every) as sess:
                 cur_step = -1
-                #while not sess.should_stop() and cur_step <= config.max_steps:
-                while cur_step <= config.max_steps:
+                while not sess.should_stop() and cur_step <= config.max_steps:
+                #while cur_step <= config.max_steps:
                     tf.logging.info("config max steps:{}".format(config.max_steps))
                     tf.logging.info("training current step:{}".format(cur_step))
                     if config.task > 0 and not start_training:
