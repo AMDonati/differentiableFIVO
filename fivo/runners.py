@@ -208,7 +208,7 @@ def run_train(config, create_dataset_and_model_fn=create_dataset_and_model):
                     parallel_iterations=config.parallel_iterations
                 )
             else:
-                ll_per_seq, _, _, _ = bounds.fivo(
+                ll_per_seq, _, _, final_state = bounds.fivo(
                     model, (inputs, targets), lengths, num_samples=config.num_samples,
                     resampling_criterion=smc.ess_criterion,
                     resampling_type=config.resampling_type,
@@ -219,28 +219,39 @@ def run_train(config, create_dataset_and_model_fn=create_dataset_and_model):
         ll_per_t = tf.reduce_mean(ll_per_seq / tf.to_float(lengths))
         ll_per_seq = tf.reduce_mean(ll_per_seq)
 
+        rnn_out = final_state.rnn_out
+        p_zt = model.transition(rnn_out)
+        zt = p_zt.sample()
+        p_xt_given_zt, latent_encoded = model.emission(zt, rnn_out)  # TODO: get mu, sigma.
+        mu = p_xt_given_zt.loc
+        sigma = p_xt_given_zt.scale
+        #xt = p_xt_given_zt.sample()
+
         tf.summary.scalar("train_ll_per_seq", ll_per_seq)
         tf.summary.scalar("train_ll_per_t", ll_per_t)
+        tf.summary.scalar("train_mu", tf.reduce_mean(mu))
+        tf.summary.scalar("train_sigma", tf.reduce_mean(sigma))
+        #TODO: add a summary for mu and sigma?
 
         if config.normalize_by_seq_len:
-            return ll_per_t, -ll_per_t
+            return ll_per_t, -ll_per_t, mu, sigma
         else:
-            return ll_per_seq, -ll_per_seq
+            return ll_per_seq, -ll_per_seq, mu, sigma
 
     def create_graph():
         """Creates the training graph."""
         global_step = tf.train.get_or_create_global_step()
-        bound, loss = create_loss()
+        bound, loss, mu, sigma = create_loss()
         opt = tf.train.AdamOptimizer(config.learning_rate)
         grads = opt.compute_gradients(loss, var_list=tf.trainable_variables())
         train_op = opt.apply_gradients(grads, global_step=global_step)
-        return bound, train_op, global_step
+        return bound, train_op, global_step, (tf.squeeze(mu), tf.squeeze(sigma))
 
     device = tf.train.replica_device_setter(ps_tasks=config.ps_tasks)
     with tf.Graph().as_default():
         if config.random_seed: tf.set_random_seed(config.random_seed)
         with tf.device(device):
-            bound, train_op, global_step = create_graph()
+            bound, train_op, global_step, (mu, sigma) = create_graph()
             log_hook = create_logging_hook(global_step, bound)
             start_training = not config.stagger_workers
             with tf.train.MonitoredTrainingSession(
@@ -253,9 +264,12 @@ def run_train(config, create_dataset_and_model_fn=create_dataset_and_model):
                     log_step_count_steps=config.summarize_every) as sess:
                 cur_step = -1
                 while not sess.should_stop() and cur_step <= config.max_steps:
-                #while cur_step <= config.max_steps:
-                    tf.logging.info("config max steps:{}".format(config.max_steps))
-                    tf.logging.info("training current step:{}".format(cur_step))
+                    #tf.logging.info("config max steps:{}".format(config.max_steps))
+                    #tf.logging.info("training current step:{}".format(cur_step))
+                    if cur_step % config.summarize_every == 0:
+                        tf.logging.info("mu: {}".format(sess.run(mu))) #TODO: add mean one.
+                        tf.logging.info("sigma: {}".format(sess.run(sigma))) #TODO: add mean one.
+                        #TODO: compute loss and save it into a csv file.
                     if config.task > 0 and not start_training:
                         cur_step = sess.run(global_step)
                         tf.logging.info("task %d not active yet, sleeping at step %d" %
@@ -386,7 +400,7 @@ def run_eval(config, create_dataset_and_model_fn=create_dataset_and_model):
         if config.random_seed: tf.set_random_seed(config.random_seed)
         lower_bounds, total_batch_length, batch_size, global_step = create_graph()
         summary_dir = config.logdir + "/" + config.split
-        summary_writer = tf.summary.FileWriter( #TODO: see how this can be read.
+        summary_writer = tf.summary.FileWriter(
             summary_dir, flush_secs=15, max_queue=100)
         saver = tf.train.Saver()
         with tf.train.SingularMonitoredSession() as sess:
