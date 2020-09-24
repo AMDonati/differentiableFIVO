@@ -69,7 +69,7 @@ tf.app.flags.DEFINE_boolean("standardize", False,
                             "standardize input data.")
 tf.app.flags.DEFINE_float("learning_rate", 3e-5,
                           "The learning rate for ADAM.")  # TODO: import param
-tf.app.flags.DEFINE_integer("max_steps", int(1e5),
+tf.app.flags.DEFINE_integer("max_steps", int(5e4),
                             "The number of gradient update steps to train for.")  # TODO: import param
 tf.app.flags.DEFINE_integer("summarize_every", 50,
                             "The number of steps between summaries.")
